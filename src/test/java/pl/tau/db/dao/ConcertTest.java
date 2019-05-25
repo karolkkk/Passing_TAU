@@ -7,15 +7,16 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
+import pl.tau.db.domain.Concert;
 
-import java.awt.*;
+
 
 @RunWith(BlockJUnit4ClassRunner.class)
 public class ConcertTest {
     @Test
     public void createObjectTest() {
-        Concert p = new Concert();
-        assertNotNull(p);
+        Concert c = new Concert();
+        assertNotNull(c);
     }
 
 
