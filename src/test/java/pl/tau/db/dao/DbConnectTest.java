@@ -14,6 +14,7 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 import org.junit.runners.JUnit4;
+import pl.tau.db.DbConnect;
 
 @RunWith(JUnit4.class)
 public class DbConnectTest {
@@ -33,7 +34,7 @@ public class DbConnectTest {
     public void ConnectionTest() {
         DbConnect connection = new DbConnect();
         try {
-            assertNotNull(connection.getConnection());
+            assertNotNull(connection.getCon());
         }
         catch(Exception e) {
             LOGGER.log(Level.FINEST,"Failed connection");
