@@ -110,6 +110,15 @@ public class ConcertDaoTest {
             initialDatabaseState.add(concert);
             assertThat(concert.getAllConcerts(), equalTo(initialDatabaseState));
         }*/
+     @Test
+     public void testGet() {
+         DAO concertDAO = new ConcertDao(connection.getCon());
+         Concert concert = (Concert) concertDAO.getConcert(initialDatabaseState.get(1).getId()).get();
+         assertEquals(initialDatabaseState.get(1).getArtist(), concert.getArtist());
+         assertEquals(initialDatabaseState.get(1).getEvent_date(), concert.getEvent_date());
+         assertEquals(initialDatabaseState.get(1).getLocation(),concert.getLocation());
+
+     }
      @Test(expected = SQLException.class)
      public void checkDeleting() throws SQLException {
          Concert concert = new Concert(initialDatabaseState.get(3));
@@ -117,7 +126,7 @@ public class ConcertDaoTest {
          initialDatabaseState.remove(3);
 
          assertEquals(1, concertDAO.deleteConcert(concert));
-         assertThat(concertDAO.getAllConcert(), equalTo(initialDatabaseState));
+         assertThat(concertDAO.getAllConcerts(), equalTo(initialDatabaseState));
          assertNull(concertDAO.getConcert(concert.getId()));
      }
 }
