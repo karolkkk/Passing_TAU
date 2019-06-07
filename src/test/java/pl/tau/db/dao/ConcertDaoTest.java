@@ -99,7 +99,7 @@ public class ConcertDaoTest {
         assertEquals(1, concertDAO.updateConcert(concert));
         //assertThat(concertDAO.getAllConcerts(), equalTo(initialDatabaseState));
     }
-     /*   @Test
+     /*  ] @Test
         public void addingTest() {
             Concert concert = new Concert();
             concert.setArtist("Organek");
@@ -110,4 +110,14 @@ public class ConcertDaoTest {
             initialDatabaseState.add(concert);
             assertThat(concert.getAllConcerts(), equalTo(initialDatabaseState));
         }*/
+     @Test(expected = SQLException.class)
+     public void checkDeleting() throws SQLException {
+         Concert concert = new Concert(initialDatabaseState.get(3));
+         DAO concertDAO = new ConcertDao(connection.getCon());
+         initialDatabaseState.remove(3);
+
+         assertEquals(1, concertDAO.deleteConcert(concert));
+         assertThat(concertDAO.getAllConcert(), equalTo(initialDatabaseState));
+         assertNull(concertDAO.getConcert(concert.getId()));
+     }
 }
