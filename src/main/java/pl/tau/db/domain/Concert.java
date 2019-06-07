@@ -9,12 +9,12 @@ public class Concert {
     private Long id;
     private String artist;
     private String location;
-    private String date;
+    private String event_date;
 
-    public Concert(Long id, String artist, String date, String location) {
+    public Concert(Long id, String artist, String event_date, String location) {
         this.id = id;
         this.artist = artist;
-        this.date = date;
+        this.event_date = event_date;
         this.location = location;
     }
 
@@ -37,12 +37,12 @@ public class Concert {
         this.artist = artist;
     }
 
-    public String getDate() {
-        return date;
+    public String getEvent_date() {
+        return event_date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setEvent_date(String event_date) {
+        this.event_date = event_date;
     }
 
     public String getLocation() {

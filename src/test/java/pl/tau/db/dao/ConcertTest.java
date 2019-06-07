@@ -19,5 +19,20 @@ public class ConcertTest {
         assertNotNull(c);
     }
 
+    @Test
+    public void concertGettersAndSettersTest() {
+        Concert concert = new Concert();
+        concert.setId(1L);
+        concert.setArtist("ACDC");
+        concert.setLocation("Gdansk");
+        concert.setEvent_date("08.08.1999");
+
+        assertEquals(1L, concert.getId().longValue());
+        assertEquals("ACDC", concert.getArtist());
+        assertEquals("Gdansk", concert.getLocation());
+        assertEquals("08.08.1999", concert.getEvent_date());
+
+    }
+
 
 }
