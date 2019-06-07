@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class DbConnect {
     private static Connection connection = null;
 
-    public static Connection getCon() throws Exception {
+    public static Connection getCon() {
 
         if(connection != null) {
             return connection;

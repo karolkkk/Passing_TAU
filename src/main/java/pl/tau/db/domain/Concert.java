@@ -17,7 +17,10 @@ public class Concert {
         this.event_date = event_date;
         this.location = location;
     }
+    public Concert(Concert concert) {
+        this.id = concert.getId();
 
+    }
     public Concert() {
     }
 

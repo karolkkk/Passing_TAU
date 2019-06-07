@@ -1,2 +1,4 @@
 pl\tau\db\domain\Concert.class
+pl\tau\db\dao\ConcertDao.class
+pl\tau\db\dao\DAO.class
 pl\tau\db\DbConnect.class
