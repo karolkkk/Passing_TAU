@@ -9,21 +9,26 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by Owner on 07/06/2019.
  */
 
-public class ConcertDao implements DAO{
+public class ConcertDao implements DAO<Concert>{
     DbConnect connection;
 
     PreparedStatement updateConcertPreparedStatement;
     PreparedStatement getAllConcertsPreparedStatement;
-
+    PreparedStatement getOneConcert;
+    PreparedStatement deleteOneConcert;
+    ResultSet rs = null;
     public ConcertDao (Connection con) {
         try {
+            getOneConcert = con.prepareStatement("SELECT * FROM concert Where id = ?");
             updateConcertPreparedStatement = con.prepareStatement("UPDATE concert SET artist = ?, event_date = ?, location = ?  WHERE id = ?");
             getAllConcertsPreparedStatement = con.prepareStatement("SELECT * FROM concert ORDER By id");
+            deleteOneConcert = con.prepareStatement("DELETE FROM concert WHERE id=?");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -69,4 +74,45 @@ public class ConcertDao implements DAO{
             throw new SQLException("Concert not found");
     }
 
-}
+    public Optional<Concert> getConcert(long id) {
+      Concert concert = new Concert();
+
+        try {
+            getOneConcert.setLong(1,id);
+            rs = getOneConcert.executeQuery();
+            while (rs.next()) {
+                concert = new Concert(rs.getLong("id"), rs.getString("artist"), rs.getString("event_date"),
+                        rs.getString("location"));
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return Optional.of(concert);
+
+    }
+
+    public int deleteConcert(Concert concert)  throws SQLException{
+        int count;
+        try {
+            if (concert.getId() != null) {
+                deleteOneConcert.setLong(1, concert.getId());
+
+
+            } else {
+                deleteOneConcert.setLong(1, -1);
+            }
+            count = deleteOneConcert.executeUpdate();
+
+        }catch(SQLException e){
+            throw new SQLException(e.getMessage());
+            }
+        if (count == 1)
+            return count;
+        else
+            throw new SQLException("Concert not found");
+    }
+    }
+
+
