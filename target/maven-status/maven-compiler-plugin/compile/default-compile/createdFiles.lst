@@ -1,4 +1,6 @@
 pl\tau\db\domain\Concert.class
 pl\tau\db\dao\ConcertDao.class
+REST\servlets\ConcertController.class
 pl\tau\db\dao\DAO.class
 pl\tau\db\DbConnect.class
+REST\Application.class
