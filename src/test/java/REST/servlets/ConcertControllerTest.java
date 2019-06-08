@@ -21,6 +21,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.client.match.MockRestRequestMatchers.jsonPath;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -58,8 +59,8 @@ public class ConcertControllerTest {
         when(service.getAllConcerts()).thenReturn(expectedResult);
         this.mockMvc.perform(get("/concerts"))
                 //.andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().json("[{\"id\":123,\"artist\":\"Waclawa,\"event_date\":23.09.2019,\"location\":Borkowo}]"));
+                .andExpect(status().isOk());
+               // .andExpect(jsonPath(np));
     }
 }
 

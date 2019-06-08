@@ -20,7 +20,7 @@ public class ConcertDao implements DAO<Concert>{
 
     PreparedStatement updateConcertPreparedStatement;
     PreparedStatement getAllConcertsPreparedStatement;
-    PreparedStatement getOneConcert;
+   public PreparedStatement getOneConcert;
     PreparedStatement deleteOneConcert;
     ResultSet rs = null;
     public ConcertDao (Connection con) {

@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: REST.servlets.ConcertControllerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.662 s <<< FAILURE! - in REST.servlets.ConcertControllerTest
-getAllShouldReturnSomeResults(REST.servlets.ConcertControllerTest)  Time elapsed: 0.172 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<404>
-	at REST.servlets.ConcertControllerTest.getAllShouldReturnSomeResults(ConcertControllerTest.java:61)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.567 s - in REST.servlets.ConcertControllerTest
