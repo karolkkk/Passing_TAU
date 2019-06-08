@@ -11,11 +11,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import pl.tau.db.DbConnect;
 import pl.tau.db.dao.ConcertDao;
 import pl.tau.db.domain.Concert;
-
+import java.sql.SQLException;
 
 import java.util.ArrayList;
 
 import java.util.List;
+
+
+import org.springframework.web.bind.annotation.*;
+
 
 @Controller
 public class ConcertController {
@@ -38,5 +42,22 @@ public class ConcertController {
         return concerts;
     }
     //getting one concert
-
+    @RequestMapping(value = "/concert/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Concert getConcert(@PathVariable("id") Long id) {
+        return concertDao.getConcert(id).get();
+    }
+    //deleting concert
+    @RequestMapping(value = "/concert/{id}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public String deletePerson(@PathVariable("id") Long id) throws SQLException {
+        concertDao.deleteConcert(concertDao.getConcert(id).get());
+        return "OK";
+    }
+    //creating concert
+    @RequestMapping(value = "/concert",method = RequestMethod.POST)
+    public Concert save(@RequestBody Concert nconcert) {
+        nconcert.setId(concertDao.save(nconcert));
+        return nconcert;
+    }
 }

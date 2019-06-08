@@ -14,5 +14,6 @@ public interface DAO<T> {
     int updateConcert(Concert concert) throws SQLException;
     Optional<T> getConcert(long id);
     int deleteConcert(T t) throws SQLException;
+     Long save(T t);
 
 }

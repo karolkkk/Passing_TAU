@@ -3,10 +3,7 @@ package pl.tau.db.dao;
 import pl.tau.db.DbConnect;
 import pl.tau.db.domain.Concert;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -113,6 +110,29 @@ public class ConcertDao implements DAO<Concert>{
         else
             throw new SQLException("Concert not found");
     }
+    @Override
+    public Long save(Concert concert) {
+        try {
+            PreparedStatement insert = connection.getCon().prepareStatement(
+                    "INSERT INTO Concert (artist, event_date, location) VALUES (?, ?,?) ",
+                    Statement.RETURN_GENERATED_KEYS);
+
+            insert.setString(1, concert.getArtist());
+            insert.setString(2, concert.getEvent_date());
+            insert.setString(3, concert.getLocation());
+            insert.executeUpdate();
+            ResultSet generatedKeys = insert.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                concert.setId(generatedKeys.getLong(1));
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return concert.getId();
     }
+
+}
 
 
