@@ -14,7 +14,7 @@ public class DbConnect {
         if(connection != null) {
             return connection;
         }
-        String url = "jdbc:mysql://localhost:8085/tau_project?useLegacyDatetimeCode=false&useSSL=false&serverTimezone=Europe/Amsterdam";
+        String url = "jdbc:mysql://localhost:8085/tau_project?useLegacyDatetimeCode=false&useSSL=false&serverTimezone=Europe/Amsterdam&allowPublicKeyRetrieval=true&";
         String username = "root";
         String password = "admin";
         try {
