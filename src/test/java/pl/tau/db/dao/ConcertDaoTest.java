@@ -20,6 +20,7 @@ import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import static org.hamcrest.beans.SamePropertyValuesAs.samePropertyValuesAs;
 import static org.junit.Assert.*;
 import static org.hamcrest.core.IsEqual.equalTo;
 
@@ -27,7 +28,11 @@ public class ConcertDaoTest {
     DbConnect connection;
     Random random;
     List<Concert> initialDatabaseState;
-
+    private String artist = ("Czort");
+    private String event_date = ("05.05.2020");
+    private String location = ("Koszalin");
+    int i=507;
+    private Long id=Long.valueOf(i);
     @Before
     public void setup() throws SQLException {
 
@@ -130,6 +135,12 @@ public class ConcertDaoTest {
         // assertNull(concertDAO.getConcert(concert.getId()));
 
      }
-
-
+    @Test
+    public void testSave(){
+        DAO concertDAO = new ConcertDao(connection.getCon());
+        Concert concert = new Concert(id,artist,event_date,location);
+        long key = concertDAO.save(concert);
+        Concert concert1 = (Concert) concertDAO.getConcert(key).get();
+        assertThat(concert1, samePropertyValuesAs(concert));
+    }
 }
