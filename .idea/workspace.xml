@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81e8fe3f-18d0-4dcc-9782-410220591807" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Passing_TAU.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Passing_TAU.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,6 +20,10 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -42,11 +45,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/tau/db/DbConnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="114">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/tau/db/dao/ConcertDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-781">
+              <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/tau/db/dao/UserDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -72,7 +96,6 @@
         <option value="$PROJECT_DIR$/src/test/java/pl/tau/db/dao/DbConnectTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/tau/db/dao/ConcertTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/tau/db/domain/Concert.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/tau/db/DbConnect.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/tau/db/dao/DAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/tau/db/dao/ConcertDaoTest.java" />
         <option value="$PROJECT_DIR$/src/REST/src/Concert.java" />
@@ -88,6 +111,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/tau/db/dao/ConcertDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/REST/servlets/ConcertControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/REST/servlets/ConcertController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/tau/db/DbConnect.java" />
       </list>
     </option>
   </component>
@@ -119,36 +143,6 @@
               <item name="Passing_TAU" type="b2602c69:ProjectViewProjectNode" />
               <item name="Passing_TAU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Passing_TAU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Passing_TAU" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Passing_TAU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Passing_TAU" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Passing_TAU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Passing_TAU" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Passing_TAU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Passing_TAU" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pl" type="462c0819:PsiDirectoryNode" />
-              <item name="tau" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Passing_TAU" type="b2602c69:ProjectViewProjectNode" />
@@ -426,10 +420,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50673000" />
+    <option name="totallyTimeSpent" value="51874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1551" height="839" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info id="Capture Tool" order="1" />
@@ -446,8 +441,8 @@
       <window_info anchor="bottom" id="Application Servers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.68879944" visible="true" weight="0.47949082" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.31120053" side_tool="true" weight="0.47949082" />
+      <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.68879944" visible="true" weight="0.28854313" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.31120053" side_tool="true" weight="0.28854313" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="bottom" id="Run" order="9" />
@@ -465,7 +460,7 @@
       <window_info anchor="right" id="Database" order="7" weight="0.32975295" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.716971" />
-      <window_info anchor="right" id="Ant Build" order="10" weight="0.24973147" />
+      <window_info active="true" anchor="right" id="Ant Build" order="10" visible="true" weight="0.13950369" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="20" column="31" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -542,23 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/tau/db/dao/ConcertDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1559937332001" expanded="true" signature="933:1172" ph="CREATE TABLE... Concert" />
-            <marker date="1559937332001" expanded="true" signature="1333:1399" ph="INSERT INTO Concert... " />
-            <marker date="1559937332001" expanded="true" signature="1559:1623" ph="SELECT id, a... Concert" />
-            <marker date="1559937332001" expanded="true" signature="1729:1794" ph="SELECT id, a... Concert" />
-            <marker date="1559937332001" expanded="true" signature="1899:1960" ph="UPDATE Conce... " />
-            <marker date="1559937332001" expanded="true" signature="2065:2098" ph="DELETE FROM " />
-            <marker date="1559937332001" expanded="true" signature="3024:3043" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/2.1.4.RELEASE/spring-boot-test-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/test/autoconfigure/web/servlet/MockMvcAutoConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -598,10 +575,6 @@
           <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1560003571683" expanded="true" signature="728:762" ph="SELECT * FRO... concert" />
-            <marker date="1560003571683" expanded="true" signature="833:906" ph="UPDATE Conce... " />
-            <marker date="1560003571683" expanded="true" signature="978:1011" ph="SELECT id, a... Concert" />
-            <marker date="1560003571683" expanded="true" signature="1068:1098" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -615,8 +588,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/tau/db/DbConnect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="114">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/tau/db/dao/UserDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/tau/db/dao/ConcertDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-781">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
