@@ -111,7 +111,7 @@ public class ConcertDao implements DAO<Concert>{
             throw new SQLException("Concert not found");
     }
     @Override
-    public Long save(Concert concert) {
+    public Concert save(Concert concert) {
         try {
             PreparedStatement insert = connection.getCon().prepareStatement(
                     "INSERT INTO Concert (artist, event_date, location) VALUES (?, ?,?) ",
@@ -130,7 +130,7 @@ public class ConcertDao implements DAO<Concert>{
             e.printStackTrace();
         }
 
-        return concert.getId();
+        return concert;
     }
 
 }

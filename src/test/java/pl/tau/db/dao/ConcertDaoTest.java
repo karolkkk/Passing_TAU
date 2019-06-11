@@ -76,7 +76,7 @@ public class ConcertDaoTest {
             e.printStackTrace();
         }
     }
-    @After
+  /* @After
     public void clean() {
         try {
             PreparedStatement deleteConcertPreparedStatement = connection.getCon().prepareStatement("DELETE FROM concert");
@@ -84,7 +84,7 @@ public class ConcertDaoTest {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
+    }*/
         @Test
         public void gettingAllTest() {
 
@@ -139,8 +139,8 @@ public class ConcertDaoTest {
     public void testSave(){
         DAO concertDAO = new ConcertDao(connection.getCon());
         Concert concert = new Concert(id,artist,event_date,location);
-        long key = concertDAO.save(concert);
-        Concert concert1 = (Concert) concertDAO.getConcert(key).get();
+        Concert concert1 = (Concert) concertDAO.save(concert);
+        //Concert concert1 = (Concert) concertDAO.getConcert(key).get();
         assertThat(concert1, samePropertyValuesAs(concert));
     }
 }

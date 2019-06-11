@@ -1,6 +1,7 @@
-pl\tau\db\domain\Concert.class
-pl\tau\db\dao\ConcertDao.class
 REST\servlets\ConcertController.class
-pl\tau\db\dao\DAO.class
+REST\WebConfig.class
 pl\tau\db\DbConnect.class
 REST\Application.class
+pl\tau\db\domain\Concert.class
+pl\tau\db\dao\ConcertDao.class
+pl\tau\db\dao\DAO.class
